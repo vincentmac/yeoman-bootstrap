@@ -1,0 +1,35 @@
+{
+  "name": "yeoman-bootstrap",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "description": "Yeoman generator for Twitter Bootstrap LESS based projects",
+  "homepage": "https://github.com/vincentmac/yeoman-bootstrap",
+  "author": {
+    "name": "Vincent Mac",
+    "email": "vincent@vincentmac.com",
+    "url": "http://vincentmac.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vincentmac/yeoman-bootstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vincentmac/yeoman-bootstrap/issues",
+    "email": "vincent@vincentmac.com"
+  },
+  "dependencies": {},
+  "keywords": [
+    "yeoman",
+    "bootstrap",
+    "generator",
+    "cli",
+    "tool",
+    "development"
+  ],
+  "scripts": {
+    "install": "node install",
+    "uninstall": "node uninstall"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
