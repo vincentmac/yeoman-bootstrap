@@ -1,7 +1,7 @@
 {
   "name": "yeoman-bootstrap",
   "preferGlobal": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yeoman generator for Twitter Bootstrap LESS based projects",
   "homepage": "https://github.com/vincentmac/yeoman-bootstrap",
   "author": {

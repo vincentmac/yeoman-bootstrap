@@ -9,6 +9,7 @@ define('app', function(require) {
   sampleData = [
       { name: 'HTML5 Boilerplate' }
     , { name: 'Twitter Bootstrap' }
+    , { name: 'Modernizr' }
     , { name: 'RequireJS' }
     , { name: 'Backbone.js' }
     , { name: 'Underscore.js' }

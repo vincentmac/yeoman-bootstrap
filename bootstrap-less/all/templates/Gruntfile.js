@@ -220,4 +220,9 @@ module.exports = function( grunt ) {
   // Alias the `test` task to run the `mocha` task instead
   grunt.registerTask('test', 'server:phantom mocha');
 
+  // Create new `recess-init` task to run `recess` during initial init
+  grunt.registerTask('recess-init', function() {
+    grunt.loadNpmTasks('grunt-recess');
+    grunt.task.run('recess');
+  });
 };
