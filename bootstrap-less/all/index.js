@@ -18,6 +18,37 @@ Generator.prototype.setupEnv = function setupEnv() {
 };
 
 /**
+ * Install packages via npm
+ */
+
+Generator.prototype.installPackages = function installPackages() {
+  var spawn = require('child_process').spawn
+    , child
+    , cb;
+
+  cb = this.async();
+
+  console.log('Installing grunt-recess...');
+
+  child = spawn('npm', ['install', 'grunt-recess', '--save-dev']);
+
+  child.stdout.setEncoding('utf8');
+  child.stdout.on('data', function(data) {
+    console.log(data.toString());
+  });
+
+  child.stderr.on('data', function(data) {
+    console.log('Error:', data.toString());
+  });
+
+  child.on('exit', function(code) {
+    console.log('grunt-recess successfully installed.');
+    cb();
+  });
+
+};
+
+/**
  * Install frontend components via yeoman/bower
  */
 
@@ -44,37 +75,6 @@ Generator.prototype.installComponents = function installComponents() {
 
   child.on('exit', function(code) {
     console.log('Latest components successfully installed.');
-    cb();
-  });
-
-};
-
-/**
- * Install packages via npm
- */
-
-Generator.prototype.installPackages = function installPackages() {
-  var spawn = require('child_process').spawn
-    , child
-    , cb;
-
-  cb = this.async();
-
-  console.log('Installing grunt-recess...');
-
-  child = spawn('npm', ['install', 'grunt-recess', '--save-dev']);
-
-  child.stdout.setEncoding('utf8');
-  child.stdout.on('data', function(data) {
-    console.log(data.toString());
-  });
-
-  child.stderr.on('data', function(data) {
-    console.log('Error:', data.toString());
-  });
-
-  child.on('exit', function(code) {
-    console.log('grunt-recess successfully installed.');
     cb();
   });
 
