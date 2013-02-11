@@ -187,8 +187,8 @@ module.exports = function( grunt ) {
     // you're using usemin-handler to parse rjs config from markup (default
     // setup)
     rjs: {
-      // optimize: 'none',  // no minification, is done by the min task
-      optimize: 'uglify',  // minify
+      optimize: 'none',  // no minification, is done by the min task
+      // optimize: 'uglify',  // minify
       baseUrl: './javascripts',
       wrap: true,
       name: 'main',
